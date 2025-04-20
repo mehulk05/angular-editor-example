@@ -1,0 +1,48 @@
+<!-- syncfusion-editor.component.html -->
+<div class="editor-container">
+    <div class="editor-controls">
+      <button class="device-button" (click)="showDevicePreview('desktop')" title="Desktop View">
+        <i class="fa fa-desktop"></i> Desktop
+      </button>
+      <button class="device-button" (click)="showDevicePreview('tablet')" title="Tablet View">
+        <i class="fa fa-tablet"></i> Tablet
+      </button>
+      <button class="device-button" (click)="showDevicePreview('mobile')" title="Mobile View">
+        <i class="fa fa-mobile"></i> Mobile
+      </button>
+      <button class="custom-button" (click)="addCustomToolbar()" title="Add Custom Toolbar">
+        Add Custom Toolbar
+      </button>
+    </div>
+  
+    <!-- Syncfusion RTE Editor -->
+    <ejs-richtexteditor #defaultRTE id='defaultRTE'   [value]="initialData"
+    [toolbarSettings]='tools' [showCharCount]='true' [quickToolbarSettings]='quickToolbarSettings'>
+
+    </ejs-richtexteditor>
+  
+    <!-- Submit Button -->
+    <div class="submit-container">
+      <button class="submit-button" (click)="getHtmlContent()">Submit</button>
+    </div>
+  
+    <!-- HTML Code Display -->
+    <div *ngIf="showHtmlCode" class="code-display">
+      <div class="code-header">
+        <h3>HTML Code</h3>
+        <button class="close-button" (click)="closeHtmlView()">×</button>
+      </div>
+      <pre class="html-content">{{htmlContent}}</pre>
+    </div>
+  
+    <!-- Device Preview Display -->
+    <div *ngIf="showPreview" class="preview-container">
+      <div class="preview-header">
+        <h3>{{currentView | titlecase}} Preview</h3>
+        <button class="close-button" (click)="closePreview()">×</button>
+      </div>
+      <div class="preview-frame" [ngClass]="currentView">
+        <div class="preview-content" [innerHTML]="previewHtml"></div>
+      </div>
+    </div>
+  </div>

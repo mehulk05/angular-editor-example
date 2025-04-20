@@ -18,6 +18,12 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@ckeditor/ckeditor5-angular": "^9.1.0",
+    "@syncfusion/ej2-angular-richtexteditor": "^29.1.37",
+    "angular-froala-wysiwyg": "^4.5.1",
+    "ckeditor5": "^45.0.0",
+    "font-awesome": "^4.7.0",
+    "froala-editor": "^4.5.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

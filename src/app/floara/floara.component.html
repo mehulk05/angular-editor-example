@@ -1,0 +1,29 @@
+<div class="editor-container">
+    <div class="editor-toolbar">
+      <h2>Email Template Editor</h2>
+      <div class="device-buttons">
+        <button (click)="changePreviewDevice('mobile')">Mobile</button>
+        <button (click)="changePreviewDevice('tablet')">Tablet</button>
+        <button (click)="changePreviewDevice('desktop')">Desktop</button>
+      </div>
+    </div>
+    
+    <div class="editor-content">
+      <!-- Froala Editor -->
+      <div [froalaEditor]="editorOptions" [(froalaModel)]="initialData"></div>
+    </div>
+    
+    <div class="preview-container">
+      <h3>Preview ({{currentDevice}})</h3>
+      <div class="preview-frame" [style.width]="previewWidth">
+        <!-- Preview of HTML content -->
+        <div [froalaView]="initialData"></div>
+      </div>
+    </div>
+    
+    <div class="html-output">
+      <h3>HTML Output</h3>
+      <button (click)="copyHtmlToClipboard()">Copy HTML</button>
+      <pre>{{initialData}}</pre>
+    </div>
+  </div>

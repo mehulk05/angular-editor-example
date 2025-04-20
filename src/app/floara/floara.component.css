@@ -1,0 +1,35 @@
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .device-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .preview-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+  }
+  .preview-frame {
+    border: 1px solid #ccc;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+  }
+  .html-output {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  pre {
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow: auto;
+    background: #eee;
+    padding: 10px;
+  }
